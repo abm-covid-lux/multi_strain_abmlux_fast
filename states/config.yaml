@@ -2,7 +2,7 @@
 # ######################################### Basic Parameters #######################################
 
 # Seed for python's PRNG:
-random_seed: 10
+random_seed: 1
 
 # The region in question:
 region: Luxembourg
@@ -149,7 +149,7 @@ epoch: 23th February 2020
 map_factory:
   __type__: simple_map_factory.SimpleMapFactory
   # Seed the PRNG, Used when resampling the density matrix
-  __prng_seed__: 10
+  __prng_seed__: 1
   # Country code to extract from the distribution data
   country_code: LU
   # File containing initial distribution of population, and see Docs for full format:
@@ -176,7 +176,7 @@ map_factory:
 world_factory:
   __type__: simple_world_factory.SimpleWorldFactory
   # Seed the PRNG
-  __prng_seed__: 10
+  __prng_seed__: 1
   # Scale factor
   scale_factor: 0.25
   # Regions and populations
@@ -582,7 +582,7 @@ world_factory:
 
 activity_model:
   __type__: simple_activity_model.SimpleActivityModel
-  __prng_seed__: 10
+  __prng_seed__: 1
   # File containing time use survey data, and see Docs for full format:
   # time_use_filepath: Scenarios/Luxembourg/time_use_sample.csv
   time_use_filepath: Scenarios/Luxembourg/TUS.csv
@@ -653,7 +653,7 @@ activity_model:
 
 movement_model:
   __type__: simple_movement_model.SimpleMovementModel
-  __prng_seed__: 10
+  __prng_seed__: 1
   # Agents in the following health states do not move location
   no_move_health_states: [HOSPITALIZING, VENTILATING, DEAD]
   # Moving onto public transport is a special case
@@ -665,7 +665,7 @@ movement_model:
 # Configures the housing model used during simulation
 housing_model:
   __type__: simple_housing_model.SimpleHousingModel
-  __prng_seed__: 10
+  __prng_seed__: 1
   # Region
   region: Luxembourg
   # Border regions and their coordinates, in [lat, lon] (WGS84) format, these being the home
@@ -728,7 +728,7 @@ housing_model:
 # Configures the education model used during simulation
 education_model:
   __type__: simple_education_model.SimpleEducationModel
-  __prng_seed__: 10
+  __prng_seed__: 1
   # The school activity type
   school_activity_type: School
   # The home activity type
@@ -769,7 +769,7 @@ education_model:
 # Configures the transport model used during simulation, including public transport (pt) and cars
 transport_model:
   __type__: simple_transport_model.SimpleTransportModel
-  __prng_seed__: 10
+  __prng_seed__: 1
   car_activity_type: Car
   car_location_type: Car
   pt_activity_type: Public Transport
@@ -804,7 +804,7 @@ transport_model:
 # Configures the health model used during simulation
 health_model:
   __type__: simple_health_model.SimpleHealthModel
-  __prng_seed__: 10
+  __prng_seed__: 1
   number_of_medical_clinics: 125
   number_of_hospitals: 11
   number_of_cemeteries: 1
@@ -822,7 +822,7 @@ health_model:
 # the above components
 leisure_model:
   __type__: simple_leisure_model.SimpleLeisureModel
-  __prng_seed__: 10
+  __prng_seed__: 1
   # Types of leisure location and how many should exist in a full size simulation
   numbers_of_leisure_locations:
     Restaurant:        2247
@@ -890,7 +890,7 @@ leisure_model:
 # Configures the labour model used during simulation
 labour_model:
   __type__: simple_labour_model.SimpleLabourModel
-  __prng_seed__: 10
+  __prng_seed__: 1
   work_activity_type: Work
   home_activity_type: House
   # Additional types of location at which agents can work together with the numbers of such
@@ -990,7 +990,7 @@ labour_model:
 
 disease_model:
   __type__: multi_strain_disease_model.MultiStrainDiseaseModel
-  __prng_seed__: 10
+  __prng_seed__: 1
   # Locations in which no or reduced transmission occurs:
   no_transmission_locations: [OW Construction, Outdoor, Belgium, France, Germany, Cemetery]
   reduced_transmission_locations: [Medical, Hospital]
@@ -1116,7 +1116,7 @@ interventions:
   basic_hospitalisation:
     # This special key defines the class to use.
     __type__: hospitalisation.Hospitalisation
-    __prng_seed__: 10
+    __prng_seed__: 1
     # Starting state of the intervention
     __enabled__: true
     # This special key defines when to disable/enable the intervention
@@ -1135,7 +1135,7 @@ interventions:
   # # invitations to test, across the population, according to a certain algorithm.
   # large_scale_testing:
   #   __type__: testing.LargeScaleTesting
-  #   __prng_seed__: 10
+  #   __prng_seed__: 1
   #   __enabled__: false
   #   __schedule__:
   #     17th May 2020: enable
@@ -1160,7 +1160,7 @@ interventions:
   # # quarantine automatically enter quarantine for a ceratin duration
   # symptomatic_quarantine:
   #   __type__: symptomatic_quarantine.SymptomaticQuarantine
-  #   __prng_seed__: 10
+  #   __prng_seed__: 1
   #   __enabled__: false
   #   __schedule__:
   #     15th March 2020: enable
@@ -1185,7 +1185,7 @@ interventions:
   # # which an agent voluntarily books a test having developed symptoms.
   # prescription_testing:
   #   __type__: testing.PrescriptionTesting
-  #   __prng_seed__: 10
+  #   __prng_seed__: 1
   #   __enabled__: false
   #   __schedule__:
   #     15th March 2020: enable
@@ -1205,7 +1205,7 @@ interventions:
   # # they request a booking.
   # test_booking:
   #   __type__: laboratory.TestBooking
-  #   __prng_seed__: 10
+  #   __prng_seed__: 1
   #   __enabled__: false
   #   __schedule__:
   #     15th March 2020: enable
@@ -1224,7 +1224,7 @@ interventions:
   # # virus, then the test returns a negative results, except in the case of a false negative.
   # test_lab:
   #   __type__: laboratory.Laboratory
-  #   __prng_seed__: 10
+  #   __prng_seed__: 1
   #   __enabled__: true
   #   __schedule__:
   #     27 February 2020: {max_tests_per_day: 1000}
@@ -1253,7 +1253,7 @@ interventions:
   # # which contacts are considered is specified.
   # contact_tracing_app:
   #   __type__: contact_tracing.ContactTracingApp
-  #   __prng_seed__: 10
+  #   __prng_seed__: 1
   #   __enabled__: false
   #   __schedule__:
   #     3rd March 2020: enable
@@ -1293,7 +1293,7 @@ interventions:
   # # With a certain probability, agents do not follow this advice and continue as normal.
   # contact_tracing_manual:
   #   __type__: contact_tracing.ContactTracingManual
-  #   __prng_seed__: 10
+  #   __prng_seed__: 1
   #   __enabled__: false
   #   __schedule__:
   #     20th April 2020: enable
@@ -1317,7 +1317,7 @@ interventions:
   # # contact tracing.
   # contact_tracing_manual_fast:
   #   __type__: contact_tracing.ContactTracingManualFast
-  #   __prng_seed__: 10
+  #   __prng_seed__: 1
   #   __enabled__: false
   #   __schedule__:
   #     20th April 2020: enable
@@ -1346,7 +1346,7 @@ interventions:
   # # quarantines are made by other interventions.
   # quarantine_at_home:
   #   __type__: quarantine.Quarantine
-  #   __prng_seed__: 10
+  #   __prng_seed__: 1
   #   __enabled__: true
   #   __schedule__:
   #     23rd September 2020: {default_duration_days: 10}
@@ -1370,7 +1370,7 @@ interventions:
 
   # work_from_home:
   #   __type__: work_from_home.WorkFromHome
-  #   __prng_seed__: 10
+  #   __prng_seed__: 1
   #   __enabled__: false
   #   __schedule__:
   #     23th June 2020: enable
@@ -1396,7 +1396,7 @@ interventions:
   # # The interventions 'curfew' directs people to stay home between certain times.
   # curfew:
   #   __type__: curfew.Curfew
-  #   __prng_seed__: 10
+  #   __prng_seed__: 1
   #   __enabled__: false
   #   __schedule__:
   #     26th October 2020: enable
@@ -1446,7 +1446,7 @@ interventions:
   # # overridden with the agent being sent home.
   # lockdown:
   #   __type__: location_closure.LocationClosures
-  #   __prng_seed__: 10
+  #   __prng_seed__: 1
   #   __enabled__: false
   #   __schedule__:
   #     15th March 2020: enable
@@ -1491,7 +1491,7 @@ interventions:
 
   # location_closure_carehome:
   #   __type__: location_closure.CareHomeClosures
-  #   __prng_seed__: 10
+  #   __prng_seed__: 1
   #   __enabled__: false
   #   __schedule__:
   #     15th March 2020: enable
@@ -1507,7 +1507,7 @@ interventions:
 
   # location_closure_shop:
   #   __type__: location_closure.ShopClosures
-  #   __prng_seed__: 10
+  #   __prng_seed__: 1
   #   __enabled__: false
   #   __schedule__:
   #     15th March 2020: enable
@@ -1528,7 +1528,7 @@ interventions:
   # # those who have tested positive will not be eligible for vaccination.
   # vaccination:
   #   __type__: multi_vaccination.MultiVaccination
-  #   __prng_seed__: 10
+  #   __prng_seed__: 1
   #   __enabled__: false
   #   __schedule__:
   #     1st March 2020: enable
