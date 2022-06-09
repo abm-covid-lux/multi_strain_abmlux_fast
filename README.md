@@ -5,7 +5,7 @@ This is a version of the [multi-strain ABMlux](https://github.com/abm-covid-lux/
 ![ABMLUX Logo](abmlux_logo.jpg)
 
 ## Overview
-Acting on a config, the multi-strain ABMlux model can be used to generate state files, representing a world of agents and locations. In the case of the provided config, the world represents Luxembourg, exactly as in the original ABMlux model and as used in the publication Thompson, J. and Wattam, S. "Estimating the impact of interventions against COVID-19: from lockdown to vaccination", 2021, PLOS ONE, https://doi.org/10.1371/journal.pone.0261330.
+Acting on a config, the multi-strain ABMlux model can be used to generate a state file, representing a world of agents and locations. In the case of the provided config, the world represents Luxembourg, exactly as in the original ABMlux model and as used in the publication Thompson, J. and Wattam, S. "Estimating the impact of interventions against COVID-19: from lockdown to vaccination", 2021, PLOS ONE, https://doi.org/10.1371/journal.pone.0261330.
 
 A selection of state files, corresponding to different random seeds used by the stochastic world builder, are provided. They are zipped, and must therefore be unzipped and placed in the states folder before use.
 
