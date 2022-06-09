@@ -3,7 +3,7 @@ import logging
 import logging.config
 import math
 from tqdm import tqdm
-from abmlux.sim_factory import SimulationFactory
+from ms_abmlux.sim_factory import SimulationFactory
 
 log = logging.getLogger()
 
